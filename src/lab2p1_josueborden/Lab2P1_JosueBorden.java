@@ -59,16 +59,53 @@ public class Lab2P1_JosueBorden {
                 int num = 0;
                 System.out.println("Ingrese un numero:");
                 num = lea.nextInt();
+                int cuadrado = 1;
+                int menorcuadrado = 0;
+                int mayorcuadrado = 0;
+                int cuadradocercano = 0;
+                
+                while(cuadrado * cuadrado < num){
+                    cuadrado++;
+                }
+                if(cuadrado * cuadrado == num){
+                    mayorcuadrado = (cuadrado + 1) * (cuadrado + 1);
+                    menorcuadrado = (cuadrado - 1) * (cuadrado - 1);
+                }
+                else{
+                    mayorcuadrado = cuadrado * cuadrado;
+                    menorcuadrado = (cuadrado -1) * (cuadrado -1);
+                }
+                int mayordiferencia = mayorcuadrado - num;
+                int menordiferencia = num - menorcuadrado;
+                
+                if(menordiferencia < mayordiferencia){
+                    cuadradocercano = menorcuadrado;
+                }
+                else if(menordiferencia > mayordiferencia){
+                    cuadradocercano = mayorcuadrado;
+                }
+                System.out.println("El numero cuadrado mas cercano a " + num + " es " + cuadradocercano);
+                
+                
+                    
+                
+                
+                
+                
+                
+                
                 
             }
             
             else if(ejercicio == 3){
                 int num = 0;
-                while(num < 999999999){
-                    System.out.println("Ingrese un numero de 10 caracteres:");
-                    num = lea.nextInt();
-                } 
-                System.out.println("num es valido");
+                System.out.println("Ingrese un numero de 10 caracteres:");
+                num = lea.nextInt();
+                
+            }
+            
+            else if (ejercicio == 4){
+                break;
             }
         }
     }
